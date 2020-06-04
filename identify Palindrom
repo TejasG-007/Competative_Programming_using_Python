@@ -1,0 +1,15 @@
+#input:124 -->124+421=545 which is palindrom
+#ouput:545
+import sys
+sys.setrecursionlimit(10**6)
+input_digit = input()
+revof_inp = input_digit[::-1]
+def recure(number):
+    temp = int(number)+int(str(number)[::-1])
+    pal_ = str(temp)[::-1]
+    if (temp == int(pal_)):
+        print(pal_)
+    else:
+        return recure(pal_)
+recure(revof_inp)
+
